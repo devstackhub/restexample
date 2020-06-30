@@ -1,5 +1,8 @@
 # Building the project
 FROM maven:3-jdk-11 as builder
+
+WORKDIR /
+
 RUN mvn package
 
 # Creating the image

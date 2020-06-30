@@ -1,3 +1,8 @@
+# Building the project
+FROM maven:3-jdk-11 as builder
+RUN mvn package
+
+# Creating the image
 FROM azul/zulu-openjdk-alpine:11
 
 COPY target/*.jar app.jar

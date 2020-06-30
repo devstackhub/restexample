@@ -12,8 +12,12 @@ RUN mvn package
 
 # Creating the image
 FROM azul/zulu-openjdk-alpine:11
+
+MAINTAINER Joby Pooppillikudiyil "joby.pooppillikudiyil@nttdata.com"
+
+
 EXPOSE 8080
-COPY target/*.jar app.jar
+COPY /build/target/*.jar app.jar
 
 ENV JAVA_OPTS=""
 

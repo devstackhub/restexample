@@ -10,7 +10,7 @@ COPY src /build/src
 RUN mvn package
 
 EXPOSE 8080
-COPY build/target/*.jar app.jar
+ADD build/target/*.jar app.jar
 
 ENV JAVA_OPTS=""
 

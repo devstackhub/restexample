@@ -15,6 +15,10 @@ FROM azul/zulu-openjdk-alpine:11
 
 MAINTAINER Joby Pooppillikudiyil "joby.pooppillikudiyil@nttdata.com"
 
+RUN pwd
+RUN ls -lrt
+RUN ls -lrt target
+
 EXPOSE 8080
 COPY build/target/*.jar app.jar
 
